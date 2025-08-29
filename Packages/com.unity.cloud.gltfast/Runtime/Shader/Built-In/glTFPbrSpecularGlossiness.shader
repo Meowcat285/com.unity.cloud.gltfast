@@ -102,6 +102,8 @@ Shader "glTF/PbrSpecularGlossiness"
             #pragma multi_compile_fwdbase
             #pragma multi_compile_fog
             #pragma multi_compile_instancing
+            // Bakery support - enable directional lightmaps for specular enhancement
+            #pragma multi_compile _ DIRLIGHTMAP_COMBINED
             // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
             //#pragma multi_compile _ LOD_FADE_CROSSFADE
 
@@ -210,6 +212,8 @@ Shader "glTF/PbrSpecularGlossiness"
 
             #pragma multi_compile_prepassfinal
             #pragma multi_compile_instancing
+            // Bakery support - enable directional lightmaps for specular enhancement
+            #pragma multi_compile _ DIRLIGHTMAP_COMBINED
             // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
             //#pragma multi_compile _ LOD_FADE_CROSSFADE
 
